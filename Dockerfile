@@ -6,4 +6,4 @@ COPY . .
 RUN npm run build
 
 
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=node:21.6 /app/build /usr/share/nginx/html
